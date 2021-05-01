@@ -406,7 +406,45 @@ Andiamo a stampare nome cognome e numero dentro una lista.
 Fare in modo poi che i contatti non attivi (attivo: false) siano stampati di colore rosso mentre gli altri normalmente di nero. Cliccando sul numero della persona fate in modo che appaia in console il cognome della persona di cui è stato cliccato il numero
  */
 
+console.log('********** SNACK 4 VUE **********');
 
+const app = new Vue({
+    el: '#app',
+    data: {
+        contatti: [
+            {
+                nome: 'Andrea',
+                cognome: 'Mattia',
+                tel: '320' + getRandomNumber(0, 9999999),
+                attivo: true,
+            },
+            {
+                nome: 'Franco',
+                cognome: 'Franchi',
+                tel: '320' + getRandomNumber(0, 9999999),
+                attivo: false,
+            },
+            {
+                nome: 'Aldo',
+                cognome: 'Baglio',
+                tel: '320' + getRandomNumber(0, 9999999),
+                attivo: true,
+            },
+            {
+                nome: 'Giuseppe',
+                cognome: 'Verdi',
+                tel: '320' + getRandomNumber(0, 9999999),
+                attivo: true,
+            },
+            {
+                nome: 'Gabriele',
+                cognome: 'Morzio',
+                tel: '320' + getRandomNumber(0, 9999999),
+                attivo: false,
+            },
+        ],
+    },
+});
 
 
 
