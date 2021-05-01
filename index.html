@@ -20,28 +20,20 @@
                     <tr>
                         <th>Nome</th>
                         <th>Cognome</th>
-                        <th>Numero</th>
-                        <th>Attivo</th>
+                        <th>Telefono</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Andrea</td>
-                        <td>Mattia</td>
-                        <td>3663523493</td>
-                        <td>true</td>
-                    </tr>
-                    <tr>
-                        <td>Andrea</td>
-                        <td>Mattia</td>
-                        <td>3663523493</td>
-                        <td>true</td>
-                    </tr>
-                    <tr>
-                        <td>Andrea</td>
-                        <td>Mattia</td>
-                        <td>3663523493</td>
-                        <td>true</td>
+                    <tr v-for="(contact, index) in contatti"
+                        :class="isActive(index) ? '' : 'danger'"
+                    >
+                        <td>{{contact.nome}}</td>
+                        <td>{{contact.cognome}}</td>
+                        <td class="phone-number" 
+                            @click="surnameLog(index)"
+                        >
+                            {{contact.tel}}
+                        </td>
                     </tr>
                 </tbody>
             </table>

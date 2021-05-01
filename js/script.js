@@ -415,34 +415,42 @@ const app = new Vue({
             {
                 nome: 'Andrea',
                 cognome: 'Mattia',
-                tel: '320' + getRandomNumber(0, 9999999),
+                tel: '320 - ' + getRandomNumber(0, 9999999),
                 attivo: true,
             },
             {
                 nome: 'Franco',
                 cognome: 'Franchi',
-                tel: '320' + getRandomNumber(0, 9999999),
+                tel: '320 - ' + getRandomNumber(0, 9999999),
                 attivo: false,
             },
             {
                 nome: 'Aldo',
                 cognome: 'Baglio',
-                tel: '320' + getRandomNumber(0, 9999999),
+                tel: '320 - ' + getRandomNumber(0, 9999999),
                 attivo: true,
             },
             {
                 nome: 'Giuseppe',
                 cognome: 'Verdi',
-                tel: '320' + getRandomNumber(0, 9999999),
+                tel: '320 - ' + getRandomNumber(0, 9999999),
                 attivo: true,
             },
             {
                 nome: 'Gabriele',
                 cognome: 'Morzio',
-                tel: '320' + getRandomNumber(0, 9999999),
+                tel: '320 - ' + getRandomNumber(0, 9999999),
                 attivo: false,
             },
         ],
+    },
+    methods: {
+        isActive(index) {
+            return this.contatti[index].attivo;
+        },
+        surnameLog(index) {
+            console.log(this.contatti[index].cognome);
+        }
     },
 });
 
