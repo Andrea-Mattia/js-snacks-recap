@@ -387,8 +387,16 @@ A partire da un array di stringhe, crea un secondo array formattando le stringhe
 Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']
 */
 
+console.log('********** SNACK 3 **********');
 
+const capArray = [];
 
+for (let i = 0; i < arr1.length; i++) {
+    const element = arr1[i];
+    capArray.push(capitalizeLetter(element));
+}
+
+console.log(capArray);
 
 
 /*
@@ -409,4 +417,8 @@ Fare in modo poi che i contatti non attivi (attivo: false) siano stampati di col
 
 function getRandomNumber(min, max) {
     return Math.floor( Math.random() * (max - min + 1) ) + min;
+}
+
+function capitalizeLetter(el) {
+    return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
 }
