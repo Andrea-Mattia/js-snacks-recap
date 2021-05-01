@@ -347,8 +347,7 @@ console.log('********** SNACK 1 **********');
 const arr1 = ['pippo', 'PLUTO', 'Paperino'];
 
 const newArr = arr1.map((el) => {
-    el = el.toLowerCase();
-    return el.charAt(0).toUpperCase() + el.slice(1)
+    return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
 });
 
 console.log(arr1);
@@ -368,8 +367,18 @@ Il software deve guardare se c'è un social aperto ed eliminarlo dalle tab.
 Nel caso la tab fosse attiva, deve attivare la successiva.
 */
 
+console.log('********** SNACK 2 **********');
 
+const socials = ['Facebook', 'Twitter', 'Instagram', 'TikTok', 'Pinterest', 'Linkedin'];
 
+const browser = {
+    tab: ['Facebook', 'GitHub', 'TikTok', 'Gmail', 'Instagram', 'Boolean'],
+    activeTab: 0,
+};
+
+browser.tab = browser.tab.filter(social => socials.indexOf(social) === - 1);
+
+console.log(browser);
 
 
 /*
